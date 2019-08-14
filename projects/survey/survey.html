@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="surveyStyles.css" />
+  </head>
+  <body id="page-wrapper">
+    <header>
+      <h1 id="title">Customer Satisfaction Survey Form</h1>
+      <p id="title-description">
+        Please spare a few minutes to give feedback. Your opinion is most
+        valuable to us!
+      </p>
+    </header>
+    <main>
+      <form action="" id="survey-form">
+        <div class="user-data-item">
+          <div class="user-data-label">
+            <label id="name-label" for="name">Name*:</label>
+          </div>
+          <div class="user-data-input">
+            <input
+              type="text"
+              id="name"
+              name="Name"
+              placeholder="Eg.Elizabeth"
+              required
+            />
+          </div>
+        </div>
+        <div class="user-data-item">
+          <div class="user-data-label">
+            <label id="email-label" for="email">Email*:</label>
+          </div>
+          <div class="user-data-input">
+            <input
+              type="email"
+              id="email"
+              name="Email"
+              placeholder="Eg. xyz@abc.com"
+              required
+            />
+          </div>
+        </div>
+        <div class="user-data-item">
+          <div class="user-data-label">
+            <label id="number-label" for="number">Age:</label>
+          </div>
+          <div class="user-data-input">
+            <input
+              type="number"
+              id="number"
+              name="Age"
+              min="18"
+              max="100"
+              placeholder="Eg. 35"
+            />
+          </div>
+        </div>
+        <div class="user-data-item">
+          <div class="user-data-label">
+            <label id="gender-label" for="gender">Gender:</label>
+          </div>
+
+          <div class="user-data-input" id="gender">
+            <input type="radio" name="gender" value="male" />Male
+            <input type="radio" name="gender" value="female" />Female
+            <input type="radio" name="gender" value="other" />Other
+          </div>
+        </div>
+
+        <div id="questionnaire"></div>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+#page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: #641e16;
+  color: white;
+}
+#survey-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#user-data-panel {
+  background-color: #d98880;
+  padding: 20px;
+  width: 80%;
+}
+.user-data-item {
+}
+.user-data-label {
+  display: inline-block;
+  text-align: right;
+  width: 20%;
+  padding: 5px;
+  margin-top: 10px;
+}
+.user-data-input {
+  display: inline-block;
+  text-align: left;
+  width: 70%;
+}
