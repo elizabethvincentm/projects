@@ -4,70 +4,182 @@
   </head>
   <body id="page-wrapper">
     <header>
-      <h1 id="title">Customer Satisfaction Survey Form</h1>
-      <p id="title-description">
-        Please spare a few minutes to give feedback. Your opinion is most
-        valuable to us!
-      </p>
+      <h1 id="title">Survey Form</h1>
     </header>
     <main>
       <form action="" id="survey-form">
-        <div class="user-data-item">
-          <div class="user-data-label">
+        <p id="description">
+          Please spare a few minutes to share your feedback. Your opinion
+          matters a lot!
+        </p>
+
+        <div class="survey-item">
+          <div class="survey-label">
             <label id="name-label" for="name">Name*:</label>
           </div>
-          <div class="user-data-input">
+          <div class="survey-input">
             <input
               type="text"
-              id="name"
-              name="Name"
+              id="user-name"
+              name="name"
               placeholder="Eg.Elizabeth"
+              class="input-field"
               required
             />
           </div>
         </div>
-        <div class="user-data-item">
-          <div class="user-data-label">
+
+        <div class="survey-item">
+          <div class="survey-label">
             <label id="email-label" for="email">Email*:</label>
           </div>
-          <div class="user-data-input">
+          <div class="survey-input">
             <input
               type="email"
-              id="email"
-              name="Email"
+              id="user-email"
+              name="email"
               placeholder="Eg. xyz@abc.com"
+              class="input-field"
               required
             />
           </div>
         </div>
-        <div class="user-data-item">
-          <div class="user-data-label">
-            <label id="number-label" for="number">Age:</label>
+
+        <div class="survey-item">
+          <div class="survey-label">
+            <label id="number-label" for="age">Age:</label>
           </div>
-          <div class="user-data-input">
+          <div class="survey-input">
             <input
               type="number"
-              id="number"
-              name="Age"
-              min="18"
+              id="user-age"
+              name="age"
+              min="10"
               max="100"
               placeholder="Eg. 35"
+              class="input-field"
             />
           </div>
         </div>
-        <div class="user-data-item">
-          <div class="user-data-label">
+
+        <div class="survey-item">
+          <div class="survey-label">
             <label id="gender-label" for="gender">Gender:</label>
           </div>
-
-          <div class="user-data-input" id="gender">
-            <input type="radio" name="gender" value="male" />Male
-            <input type="radio" name="gender" value="female" />Female
-            <input type="radio" name="gender" value="other" />Other
+          <div class="survey-input" id="gender-radio" name="gender">
+            <ul class="group-inputs">
+              <li class="input-option">
+                <input type="radio" name="gender" value="male" />Male
+              </li>
+              <li class="input-option">
+                <input type="radio" name="gender" value="female" />Female
+              </li>
+              <li class="input-option">
+                <input type="radio" name="gender" value="other" />Other
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div id="questionnaire"></div>
+        <div class="survey-item">
+          <div class="survey-label">
+            <label for="current-role">What is your current role?</label>
+          </div>
+          <div class="survey-input">
+            <select id="role-dropdown" class="dropdown" name="current-role">
+              <option disabled value>Select an option</option>
+              <option value="student">Student</option>
+              <option value="fulltime-job">Full-time job</option>
+              <option value="self-learner">Self-learner</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="survey-item">
+          <div class="survey-label">
+            <label for="recommend"
+              >*Would you recommend CoderBee to your friend?</label
+            >
+          </div>
+          <div class="survey-input" id="recommend-radio" name="recommend">
+            <ul class="group-inputs">
+              <li class="input-option">
+                <input
+                  type="radio"
+                  name="recommend"
+                  value="definitely"
+                />Definitely
+              </li>
+              <li class="input-option">
+                <input type="radio" name="recommend" value="maybe" />Maybe
+              </li>
+              <li class="input-option">
+                <input type="radio" name="recommend" value="cannot-say" />Cannot
+                say
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="survey-item">
+          <div class="survey-label">
+            <label for="favorite-course"
+              >Which course do you like the most in CoderBee?</label
+            >
+          </div>
+          <div class="survey-input">
+            <select
+              id="course-dropdown"
+              class="dropdown"
+              name="favorite-course"
+            >
+              <option value="html-css">HTML and CSS</option>
+              <option value="javascript">Mastering JS</option>
+              <option value="best-practices">Coding best practices</option>
+              <option value="none">None</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="survey-item">
+          <div class="survey-label">
+            <label for="improvement"
+              >What would you like to improve/change in CoderBee
+              platform?</label
+            >
+          </div>
+          <div class="survey-input" id="course-checkbox" name="improvement">
+            <ul class="group-inputs">
+              <li class="input-option">
+                <input type="checkbox" name="improvement" value="1" />Course
+                material
+              </li>
+              <li class="input-option">
+                <input type="checkbox" name="improvement" value="2" />Projects
+              </li>
+              <li class="input-option">
+                <input type="checkbox" name="improvement" value="3" />Help forum
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="survey-item">
+          <div class="survey-label">
+            <label for="comment">Any other thoughts/comments?:</label>
+          </div>
+          <div class="survey-input">
+            <textarea
+              id="comment-text"
+              class="input-field"
+              name="comment"
+              placeholder="Comments please..."
+            ></textarea>
+          </div>
+        </div>
+
+        <button id="submit" type="submit">Submit</button>
       </form>
     </main>
     <footer></footer>
