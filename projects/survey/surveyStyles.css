@@ -83,12 +83,13 @@
   border: 2px solid #ffca28;
   font-size: 1.1em;
 }
-@media screen and (max-width: 720px) {
-  .input-field {
+@media screen and (max-width: 800px) {
+  .input-field,
+  #comment-text {
     width: 80%;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 570px) {
   .survey-label {
     text-align: left;
     width: 100%;
