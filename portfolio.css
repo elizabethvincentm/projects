@@ -1,0 +1,181 @@
+body {
+  background-color: rgb(49, 48, 48);
+  color: whitesmoke;
+  text-transform: capitalize;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 10vh 10vw;
+  font-size: 1.5vw;
+}
+#page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+#nav-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  left: 0;
+}
+
+#contact-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  right: 0;
+}
+
+.nav-links,
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  padding: 5vh 5vw;
+}
+.nav-links i,
+.contact-links i {
+  font-size: 4vw;
+}
+
+.link-texts {
+  visibility: hidden;
+}
+
+.contact-links:hover .link-texts,
+.nav-links:hover .link-texts {
+  visibility: visible;
+}
+.contact-links:active,
+.nav-links:active {
+  color: blanchedalmond;
+}
+
+#content-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid whitesmoke;
+  border-radius: 15px;
+  height: 80vh;
+  width: 75vw;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  align-self: center;
+}
+#name {
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-size: 2.5vw;
+  padding-bottom: 50px;
+}
+
+.content ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  list-style: none;
+}
+.content ul li {
+  padding: 10px;
+}
+.project-link {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.project-link:hover {
+  color: rgba(255, 235, 205, 0.788);
+  font-size: 1.1em;
+}
+.active {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+@media only screen and (max-width: 560px) {
+  #page-wrapper {
+    flex-direction: column;
+  }
+  #nav-block {
+    flex-direction: row;
+    top: 0;
+    left: auto;
+  }
+  #contact-block {
+    flex-direction: row;
+    bottom: 0;
+    right: auto;
+  }
+  #content-block {
+    height: 75vh;
+    width: 70vw;
+  }
+}
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.rowTab {
+  padding: 5px;
+}
+.form-label {
+  display: inline-block;
+  text-align: right;
+  vertical-align: middle;
+  width: 40%;
+}
+.form-input {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  width: 50%;
+  margin: 10px;
+}
+
+.form-input textarea {
+  height: 20vh;
+}
+.input-field {
+  height: 3vh;
+  width: 20vw;
+  border: 1px solid rgb(125, 161, 197);
+  border-radius: 5px;
+  padding: 2px;
+}
+.input-field:focus {
+  border: 1px solid rgb(191, 219, 248);
+}
+.active-link {
+  color: rgb(50, 165, 211);
+}
+#send {
+  align-self: center;
+  border: solid 1px rgb(135, 135, 136);
+  border-radius: 5px;
+  background: whitesmoke;
+  font-size: 1em;
+  margin-top: 20px;
+}
+#send:hover {
+  font-size: 1.2em;
+}

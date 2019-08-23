@@ -1,20 +1,149 @@
-<html>
-  <head> </head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      title="portfolio"
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+      integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="portfolio.css" />
+  </head>
+
   <body>
-    <header></header>
-    <main>
-      <div>About</div>
-      <div>
-        <h2>Projects</h2>
-        <ul>
-          <li><a href="projects/tribute/tributePage.html">Tribute Page</a></li>
-          <li><a href="projects/survey/survey.html">Survey Form</a></li>
-          <li><a href="">Technical documentation</a></li>
-          <li><a href="">Product Landing Page</a></li>
-        </ul>
+    <div id="page-wrapper">
+      <div id="nav-block">
+        <div
+          id="home-icon"
+          class="nav-links active-link"
+          onclick="handleClick('home')"
+        >
+          <i class="fa fa-home"></i>
+          <div class="link-texts">
+            home
+          </div>
+        </div>
+        <div id="about-icon" class="nav-links" onclick="handleClick('about')">
+          <i class="fa fa-user"></i>
+          <div class="link-texts">about</div>
+        </div>
+        <div
+          id="projects-icon"
+          class="nav-links"
+          onclick="handleClick('projects')"
+        >
+          <i class="fa fa-folder"></i>
+          <div class="link-texts">projects</div>
+        </div>
+        <div id="resume-icon" class="nav-links" onclick="handleClick('resume')">
+          <i class="fa fa-file"></i>
+          <div class="link-texts">resume</div>
+        </div>
       </div>
-      <div>contact</div>
-    </main>
-    <footer></footer>
+      <div id="content-block">
+        <div id="home" class="content active">
+          <div id="name">elizabeth vincent m</div>
+          <div>web developer</div>
+        </div>
+        <div id="about" class="content hidden">
+          <p>Hi. I am a self-taught web-developer, based in India.</p>
+        </div>
+        <div id="projects" class="content hidden">
+          <ul>
+            <li>
+              <a
+                class="project-link"
+                href="projects/tribute/tributePage.html"
+                target="_blank"
+                >Tribute Page</a
+              >
+            </li>
+            <li>
+              <a
+                class="project-link"
+                href="projects/survey/survey.html"
+                target="_blank"
+                >Survey Form</a
+              >
+            </li>
+            <li>
+              <a class="project-link" href="" target="_blank"
+                >Technical documentation</a
+              >
+            </li>
+            <li>
+              <a class="project-link" href="" target="_blank"
+                >Product Landing Page</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div id="resume" class="content hidden">
+          <p>lorem ipsum....resume content here...</p>
+        </div>
+        <div id="message" class="content hidden">
+          <form action="" id="contact-form">
+            <div class="rowTab">
+              <div>Lets Connect!</div>
+            </div>
+            <div class="rowTab">
+              <div class="form-label"><label for="name">Name:</label></div>
+              <div class="form-input">
+                <input name="name" type="text" required class="input-field" />
+              </div>
+            </div>
+            <div class="rowTab">
+              <div class="form-label"><label for="mail">email id:</label></div>
+              <div class="form-input">
+                <input name="mail" type="email" required class="input-field" />
+              </div>
+            </div>
+            <div class="rowTab">
+              <div class="form-label"><label for="msg">Message:</label></div>
+              <div class="form-input">
+                <textarea name="msg" class="input-field"></textarea>
+              </div>
+            </div>
+            <button id="send" type="submit">
+              <i class="fa fa-plane"></i>Send
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div id="contact-block">
+        <div class="contact-link-div">
+          <a
+            class="contact-links"
+            href="mailto:elizabethvincentm@gmail.com"
+            target="_blank"
+            ><i class="fa fa-envelope"></i>
+            <div class="link-texts">email</div></a
+          >
+        </div>
+        <div
+          id="message-icon"
+          class="contact-links"
+          onclick="handleClick('message')"
+        >
+          <i class="fa fa-comment"></i>
+          <div class="link-texts">message</div>
+        </div>
+        <div class="contact-link-div">
+          <a class="contact-links" href="" target="_blank"
+            ><i class="fa fa-github-square"></i>
+            <div class="link-texts">github</div></a
+          >
+        </div>
+        <div class="contact-link-div">
+          <a class="contact-links" href="" target="_blank"
+            ><i class="fa fa-linkedin"></i>
+            <div class="link-texts">linkedIn</div></a
+          >
+        </div>
+      </div>
+    </div>
   </body>
+  <script src="portfolio.js"></script>
 </html>
