@@ -1,0 +1,45 @@
+#page-wrapper {
+  background: rgb(13, 38, 63);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#quote-box {
+  background: rgb(136, 187, 238);
+  border-radius: 20px;
+  margin: 10vh 20vw;
+}
+#quote-left {
+  font-size: 1.2em;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+#text {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 600;
+  padding: 20px;
+}
+#author {
+  text-align: right;
+  padding: 10px;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+#new-quote {
+  float: right;
+  background: rgb(15, 63, 110);
+  color: white;
+  margin: 0.5em;
+  text-align: center;
+}
+#tweet-quote {
+  float: left;
+  font-size: 1.3em;
+  background: rgb(15, 63, 110);
+  color: white;
+  margin: 0.5em;
+}
