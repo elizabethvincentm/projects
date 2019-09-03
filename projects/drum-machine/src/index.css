@@ -1,0 +1,41 @@
+body {
+  background: rgb(59, 48, 45);
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+#drum-machine {
+  display: flex;
+  margin: 2vw;
+  justify-content: space-around;
+  align-items: center;
+}
+.drum-pad {
+  width: 10vw;
+  height: 10vw;
+  background: rgb(131, 117, 113);
+  color: rgb(59, 48, 45);
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px rgb(58, 58, 58);
+  margin: 1vw;
+  border: none;
+}
+#pad-group {
+  display: flex;
+  flex-wrap: wrap;
+  width: 40vw;
+}
+#display {
+  border: solid 2px rgb(131, 117, 113);
+  color: rgb(131, 117, 113);
+  font-size: 2em;
+  border-radius: 20px;
+  width: 50vw;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
