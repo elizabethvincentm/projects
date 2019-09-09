@@ -5,8 +5,11 @@
   align-items: center;
   font-family: "Architects Daughter", sans-serif;
   font-size: 20px;
-  background-color: whitesmoke;
+  background-color: #8a3206;
+  background-image: url("http://www.transparenttextures.com/patterns/brick-wall.png");
+  background-size: auto;
   text-decoration: none;
+  color: #0b0e42;
 }
 
 #home {
@@ -29,7 +32,7 @@
   left: 2vw;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-align: center;
 }
 #about .content-title {
@@ -44,6 +47,7 @@
   left: 8vw;
   right: 8vw;
   height: 70vh;
+  padding-top: 1em;
 }
 
 #projects {
@@ -52,7 +56,7 @@
   right: 2vw;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-align: center;
 }
 #projects .content-title {
@@ -67,6 +71,7 @@
   left: 8vw;
   right: 8vw;
   height: 70vh;
+  padding-top: 1em;
 }
 
 #connect {
@@ -98,10 +103,10 @@
   margin: 1rem;
 }
 #connect .content-desc ul li a {
-  color: red;
+  color: #ffe4d6;
 }
 #connect .content-desc ul li a:hover {
-  color: cyan;
+  color: #0b0e42;
 }
 
 .content-active .content-title {
@@ -110,8 +115,9 @@
   z-index: 2;
 }
 .content-active .content-desc {
-  background: cyan;
-  box-shadow: 0 0 30px 10px cyan;
+  background-color: #ac9994;
+  background-image: url("http://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  border-radius: 2px;
 }
 .content-active #content-about {
   text-align: center;
@@ -167,7 +173,7 @@
   color: black;
 }
 .content-active #content-about #about-grid .about-section ul li a:hover {
-  color: red;
+  color: #8a2e00;
 }
 .content-active #content-projects {
   text-align: center;
@@ -185,26 +191,30 @@
   overflow: auto;
 }
 .content-active #content-projects .project-list .project {
-  background: rgba(255, 253, 107, 0.925);
+  background-color: #8c95ff;
+  background-image: url("http://www.transparenttextures.com/patterns/black-linen-2.png");
   padding: 2em;
   margin: 1em;
   flex: 1 1 20em;
-  box-shadow: 1px 1px 5px 2px #c7cace;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 .content-active #content-projects .project-list .project a {
   text-decoration: none;
   font-size: 1.2rem;
-  color: black;
+  color: #0b0e42;
 }
-.content-active #content-projects .project-list .project a:hover {
-  color: red;
+.content-active #content-projects .project-list .project:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.content-active #content-projects .project-list .project:hover a {
+  color: #8a2e00;
 }
 
 .content-hidden .content-title {
-  text-shadow: 0 0 10px 5px cyan;
-  font-weight: 200;
-  font-size: 1rem;
+  text-shadow: 0 0 10px 5px #ac9994;
+  font-weight: 400;
+  font-size: 1.3rem;
   cursor: pointer;
   z-index: 2;
 }
@@ -228,18 +238,18 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: whitesmoke;
+  background: #ccb6ab;
   border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #009c9c;
+  background: #80726b;
   border-radius: 20px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #004b4b;
+  background: #8a2e00;
 }
 
 /*# sourceMappingURL=index.css.map */

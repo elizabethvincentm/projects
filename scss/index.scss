@@ -1,5 +1,18 @@
 $main-font: "Architects Daughter";
-$content-background-color: cyan;
+$content-background-color: #ac9994;
+$text-color: rgb(11, 14, 66);
+$page-background-color: #8a3206;
+$contact-icon-color: #ffe4d6;
+$contact-icon-hover-color: rgb(11, 14, 66);
+$link-hover-color: #8a2e00;
+$project-card-color: #8c95ff;
+$scroll-track-color: #ccb6ab;
+$scroll-thumb-color: #80726b;
+$scroll-thumb-hover-color: #8a2e00;
+$scene-bg-texture: url("http://www.transparenttextures.com/patterns/brick-wall.png");
+$content-bg-texture: url("http://www.transparenttextures.com/patterns/concrete-wall-3.png");
+$project-card-bg-texture: url("http://www.transparenttextures.com/patterns/black-linen-2.png");
+
 #page-wrapper {
   display: flex;
   flex-direction: column;
@@ -8,8 +21,11 @@ $content-background-color: cyan;
 
   font-family: $main-font, sans-serif;
   font-size: 20px;
-  background-color: whitesmoke;
+  background-color: $page-background-color;
+  background-image: $scene-bg-texture;
+  background-size: auto;
   text-decoration: none;
+  color: $text-color;
 }
 
 #home {
@@ -31,7 +47,7 @@ $content-background-color: cyan;
   left: 2vw;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-align: center;
 
   .content-title {
@@ -47,6 +63,7 @@ $content-background-color: cyan;
     left: 8vw;
     right: 8vw;
     height: 70vh;
+    padding-top: 1em;
   }
 }
 #projects {
@@ -55,7 +72,7 @@ $content-background-color: cyan;
   right: 2vw;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-align: center;
 
   .content-title {
@@ -71,6 +88,7 @@ $content-background-color: cyan;
     left: 8vw;
     right: 8vw;
     height: 70vh;
+    padding-top: 1em;
   }
 }
 #connect {
@@ -99,10 +117,10 @@ $content-background-color: cyan;
       li {
         margin: 1rem;
         a {
-          color: red;
+          color: $contact-icon-color;
         }
         a:hover {
-          color: cyan;
+          color: $contact-icon-hover-color;
         }
       }
     }
@@ -115,8 +133,10 @@ $content-background-color: cyan;
     z-index: 2;
   }
   .content-desc {
-    background: $content-background-color;
-    box-shadow: 0 0 30px 10px $content-background-color;
+    background-color: $content-background-color;
+    background-image: $content-bg-texture;
+    border-radius: 2px;
+    // box-shadow: 0 0 2px 2px rgb(175, 174, 174);
   }
   #content-about {
     text-align: center;
@@ -170,7 +190,7 @@ $content-background-color: cyan;
               color: black;
             }
             a:hover {
-              color: red;
+              color: $link-hover-color;
             }
           }
         }
@@ -192,19 +212,23 @@ $content-background-color: cyan;
       overflow: auto;
       //width: 100%;
       .project {
-        background: rgba(255, 253, 107, 0.925);
+        background-color: $project-card-color;
+        background-image: $project-card-bg-texture;
         padding: 2em;
         margin: 1em;
         flex: 1 1 20em;
-        box-shadow: 1px 1px 5px 2px rgb(199, 202, 206);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         border-radius: 5px;
         a {
           text-decoration: none;
           font-size: 1.2rem;
-          color: black;
+          color: $text-color;
         }
-        a:hover {
-          color: red;
+      }
+      .project:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        a {
+          color: $link-hover-color;
         }
       }
     }
@@ -213,8 +237,8 @@ $content-background-color: cyan;
 .content-hidden {
   .content-title {
     text-shadow: 0 0 10px 5px $content-background-color;
-    font-weight: 200;
-    font-size: 1rem;
+    font-weight: 400;
+    font-size: 1.3rem;
     cursor: pointer;
     z-index: 2;
   }
@@ -248,16 +272,16 @@ $content-background-color: cyan;
 }
 
 ::-webkit-scrollbar-track {
-  background: whitesmoke;
+  background: $scroll-track-color;
   border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(0, 156, 156);
+  background: $scroll-thumb-color;
   border-radius: 20px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(0, 75, 75);
+  background: $scroll-thumb-hover-color;
 }
