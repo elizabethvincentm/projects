@@ -1,0 +1,263 @@
+$main-font: "Architects Daughter";
+$content-background-color: cyan;
+#page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: $main-font, sans-serif;
+  font-size: 20px;
+  background-color: whitesmoke;
+  text-decoration: none;
+}
+
+#home {
+  text-align: center;
+  .content-title {
+    position: fixed;
+    top: 5vh;
+  }
+  .content-desc {
+    position: fixed;
+    top: 30vh;
+    left: 10vw;
+    right: 10vw;
+  }
+}
+#about {
+  position: fixed;
+  top: 10vh;
+  left: 2vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+
+  .content-title {
+    width: 1rem;
+    position: fixed;
+    top: 30vh;
+    letter-spacing: 2rem;
+  }
+
+  .content-desc {
+    position: fixed;
+    top: 15vh;
+    left: 8vw;
+    right: 8vw;
+    height: 70vh;
+  }
+}
+#projects {
+  position: fixed;
+  top: 10vh;
+  right: 2vw;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  text-align: center;
+
+  .content-title {
+    width: 1rem;
+    position: fixed;
+    top: 30vh;
+    letter-spacing: 2rem;
+  }
+
+  .content-desc {
+    position: fixed;
+    top: 15vh;
+    left: 8vw;
+    right: 8vw;
+    height: 70vh;
+  }
+}
+#connect {
+  position: fixed;
+  bottom: 1vh;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  .content-title {
+    vertical-align: middle;
+    text-align: center;
+  }
+  .content-desc {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      li {
+        margin: 1rem;
+        a {
+          color: red;
+        }
+        a:hover {
+          color: cyan;
+        }
+      }
+    }
+  }
+}
+.content-active {
+  .content-title {
+    font-weight: 700;
+    font-size: 2rem;
+    z-index: 2;
+  }
+  .content-desc {
+    background: $content-background-color;
+    box-shadow: 0 0 30px 10px $content-background-color;
+  }
+  #content-about {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: auto;
+    #about-grid {
+      display: grid;
+      grid-template-areas:
+        "education certifications"
+        "experience skills";
+      #education {
+        grid-area: education;
+      }
+      #certifications {
+        grid-area: certifications;
+        .certificate i {
+          font-size: 1rem;
+        }
+      }
+      #experience {
+        grid-area: experience;
+      }
+      #skills {
+        grid-area: skills;
+      }
+      .about-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        div {
+          font-size: 1.5rem;
+          font-weight: 600;
+          text-align: center;
+        }
+        ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          flex-wrap: wrap;
+          width: 60%;
+          li {
+            list-style: none;
+            padding: 0.5em;
+            a {
+              text-decoration: none;
+              color: black;
+            }
+            a:hover {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+  #content-projects {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .project-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-evenly;
+      list-style: none;
+      overflow: auto;
+      //width: 100%;
+      .project {
+        background: rgba(255, 253, 107, 0.925);
+        padding: 2em;
+        margin: 1em;
+        flex: 1 1 20em;
+        box-shadow: 1px 1px 5px 2px rgb(199, 202, 206);
+        border-radius: 5px;
+        a {
+          text-decoration: none;
+          font-size: 1.2rem;
+          color: black;
+        }
+        a:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}
+.content-hidden {
+  .content-title {
+    text-shadow: 0 0 10px 5px $content-background-color;
+    font-weight: 200;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .content-desc {
+    display: none;
+  }
+}
+@media screen and (max-width: 630px) {
+  .content-active {
+    #content-about {
+      #about-grid {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  #connect {
+    .content-desc {
+      ul {
+        li {
+          margin: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+/*scrollbar*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: whitesmoke;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 156, 156);
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 75, 75);
+}

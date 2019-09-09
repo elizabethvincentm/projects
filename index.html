@@ -1,157 +1,161 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <script src="https://kit.fontawesome.com/ec8a830cc0.js"></script>
+    <script src="index.js"></script>
     <link
-      title="portfolio"
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
-      integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+"
-      crossorigin="anonymous"
+      href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"
     />
-    <link rel="stylesheet" type="text/css" href="portfolio.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Architects Daughter"
+      rel="stylesheet"
+    />
+    <!--link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"-->
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
   </head>
+  <body id="page-wrapper">
+    <div id="home" class="content-active" onclick="handleClick('home')">
+      <div class="content-title">HOME</div>
+      <div class="content-desc">
+        <h1>Hi ! I am Elizabeth Vincent M</h1>
+        <p>
+          I am a self-taught web developer, trying to learn new things and solve
+          new problems everyday.
+        </p>
+      </div>
+    </div>
+    <div id="about" class="content-hidden" onclick="handleClick('about')">
+      <div class="content-title">A B O U T</div>
 
-  <body>
-    <div id="page-wrapper">
-      <div id="nav-block">
-        <div
-          id="home-icon"
-          class="nav-links active-link"
-          onclick="handleClick('home')"
-        >
-          <i class="fa fa-home"></i>
-          <div class="link-texts">
-            home
+      <div class="content-desc" id="content-about">
+        <div>An overview of my journey so far...</div>
+        <div id="about-grid">
+          <div id="experience" class="about-section">
+            <div><i class="fa fa-briefcase"></i> Experience</div>
+            <ul>
+              <li>
+                <strong>SFO Technologies</strong> - Software Engineer | July
+                2016 - June 2018 | Kerala,India
+              </li>
+              <li>
+                <strong>Bosch</strong> - Software Engineer | Sept 2013 - June
+                2016 | Bangalore/Coimbatore,India
+              </li>
+            </ul>
+          </div>
+          <div id="education" class="about-section">
+            <div><i class="fa fa-graduation-cap"></i> Education</div>
+            <ul>
+              <li>
+                Bachelor of Technology | Electrical and Electronics | Cochin
+                University | 85%
+              </li>
+            </ul>
+          </div>
+
+          <div id="certifications" class="about-section">
+            <div><i class="fa fa-certificate"></i> Certifications</div>
+            <ul>
+              <li class="certificate">
+                <a
+                  href="https://www.freecodecamp.org/certification/elizabethvincentm/responsive-web-design"
+                  target="_blank"
+                  >Responsive Web Design
+                  <i class="fas fa-external-link-square-alt"></i
+                ></a>
+              </li>
+              <li class="certificate">
+                <a
+                  href="https://www.freecodecamp.org/certification/elizabethvincentm/javascript-algorithms-and-data-structures"
+                  target="_blank"
+                  >Javascript Algorithm and data structures
+                  <i
+                    class="fas fa-external-link-square-alt fa-external-link-alt"
+                  ></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div id="skills" class="about-section">
+            <div><i class="fa fa-cogs"></i> Skills</div>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+
+              <li>Bootstrap</li>
+              <li>jQuery</li>
+              <li>Sass</li>
+              <li>React</li>
+            </ul>
           </div>
         </div>
-        <div id="about-icon" class="nav-links" onclick="handleClick('about')">
-          <i class="fa fa-user"></i>
-          <div class="link-texts">about</div>
-        </div>
-        <div
-          id="projects-icon"
-          class="nav-links"
-          onclick="handleClick('projects')"
-        >
-          <i class="fa fa-folder"></i>
-          <div class="link-texts">projects</div>
-        </div>
-        <div id="resume-icon" class="nav-links" onclick="handleClick('resume')">
-          <i class="fa fa-file"></i>
-          <div class="link-texts">resume</div>
-        </div>
-      </div>
-      <div id="content-block">
-        <div id="home" class="content active">
-          <div id="name">elizabeth vincent m</div>
-          <div>web developer</div>
-        </div>
-        <div id="about" class="content hidden">
-          <p>Hi. I am a self-taught web-developer, based in India.</p>
-        </div>
-        <div id="projects" class="content hidden">
-          <ul>
-            <li>
-              <a
-                class="project-link"
-                href="projects/tribute/tributePage.html"
-                target="_blank"
-                >Tribute Page</a
-              >
-            </li>
-            <li>
-              <a
-                class="project-link"
-                href="projects/survey/survey.html"
-                target="_blank"
-                >Survey Form</a
-              >
-            </li>
-            <li>
-              <a class="project-link" href="" target="_blank"
-                >Technical documentation</a
-              >
-            </li>
-            <li>
-              <a class="project-link" href="" target="_blank"
-                >Product Landing Page</a
-              >
-            </li>
-            <li>
-              <a
-                class="project-link"
-                href="projects/quoteMachine/quoteMachine.html"
-                target="_blank"
-                >Random Quote Machine</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div id="resume" class="content hidden">
-          <p>lorem ipsum....resume content here...</p>
-        </div>
-        <div id="message" class="content hidden">
-          <form action="" id="contact-form">
-            <div class="rowTab">
-              <div>Lets Connect!</div>
-            </div>
-            <div class="rowTab">
-              <div class="form-label"><label for="name">Name:</label></div>
-              <div class="form-input">
-                <input name="name" type="text" required class="input-field" />
-              </div>
-            </div>
-            <div class="rowTab">
-              <div class="form-label"><label for="mail">email id:</label></div>
-              <div class="form-input">
-                <input name="mail" type="email" required class="input-field" />
-              </div>
-            </div>
-            <div class="rowTab">
-              <div class="form-label"><label for="msg">Message:</label></div>
-              <div class="form-input">
-                <textarea name="msg" class="input-field"></textarea>
-              </div>
-            </div>
-            <button id="send" type="submit">
-              <i class="fa fa-plane"></i>Send
-            </button>
-          </form>
-        </div>
-      </div>
-
-      <div id="contact-block">
-        <div class="contact-link-div">
-          <a
-            class="contact-links"
-            href="mailto:elizabethvincentm@gmail.com"
-            target="_blank"
-            ><i class="fa fa-envelope"></i>
-            <div class="link-texts">email</div></a
-          >
-        </div>
-        <div
-          id="message-icon"
-          class="contact-links"
-          onclick="handleClick('message')"
-        >
-          <i class="fa fa-comment"></i>
-          <div class="link-texts">message</div>
-        </div>
-        <div class="contact-link-div">
-          <a class="contact-links" href="" target="_blank"
-            ><i class="fa fa-github-square"></i>
-            <div class="link-texts">github</div></a
-          >
-        </div>
-        <div class="contact-link-div">
-          <a class="contact-links" href="" target="_blank"
-            ><i class="fa fa-linkedin"></i>
-            <div class="link-texts">linkedIn</div></a
-          >
+        <div>
+          Or...you can download a copy of my resume
+          <a href="" target="_blank">here</a>
         </div>
       </div>
     </div>
+    <div id="projects" class="content-hidden" onclick="handleClick('projects')">
+      <div class="content-title">P R O J E C T S</div>
+      <div id="content-projects" class="content-desc">
+        <div>Projects I have done so far...</div>
+        <ul class="project-list">
+          <li class="project">
+            <a href="projects/tribute/tributePage.html" target="_blank"
+              >Tribute Page</a
+            >
+          </li>
+          <li class="project">
+            <a href="projects/survey/survey.html" target="_blank"
+              >Survey Form</a
+            >
+          </li>
+          <li class="project">
+            <a href="" target="_blank">Technical documentation</a>
+          </li>
+          <li class="project">
+            <a href="" target="_blank">Product Landing Page</a>
+          </li>
+          <li class="project">
+            <a href="projects/quoteMachine/quoteMachine.html" target="_blank"
+              >Random Quote Machine</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="connect">
+      <div class="content-title">Let&apos;s CONNECT</div>
+
+      <div class="content-desc">
+        <ul>
+          <li>
+            <a href="mailto:elizabethvincentm@gmail.com" target="_blank"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/elizabethvincentm" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/elizabeth-vincent-6b6876190/"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.freecodecamp.org/elizabethvincentm"
+              target="_blank"
+              ><i class="fab fa-free-code-camp"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </body>
-  <script src="portfolio.js"></script>
 </html>

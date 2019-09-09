@@ -1,0 +1,245 @@
+#page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Architects Daughter", sans-serif;
+  font-size: 20px;
+  background-color: whitesmoke;
+  text-decoration: none;
+}
+
+#home {
+  text-align: center;
+}
+#home .content-title {
+  position: fixed;
+  top: 5vh;
+}
+#home .content-desc {
+  position: fixed;
+  top: 30vh;
+  left: 10vw;
+  right: 10vw;
+}
+
+#about {
+  position: fixed;
+  top: 10vh;
+  left: 2vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+#about .content-title {
+  width: 1rem;
+  position: fixed;
+  top: 30vh;
+  letter-spacing: 2rem;
+}
+#about .content-desc {
+  position: fixed;
+  top: 15vh;
+  left: 8vw;
+  right: 8vw;
+  height: 70vh;
+}
+
+#projects {
+  position: fixed;
+  top: 10vh;
+  right: 2vw;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  text-align: center;
+}
+#projects .content-title {
+  width: 1rem;
+  position: fixed;
+  top: 30vh;
+  letter-spacing: 2rem;
+}
+#projects .content-desc {
+  position: fixed;
+  top: 15vh;
+  left: 8vw;
+  right: 8vw;
+  height: 70vh;
+}
+
+#connect {
+  position: fixed;
+  bottom: 1vh;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#connect .content-title {
+  vertical-align: middle;
+  text-align: center;
+}
+#connect .content-desc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#connect .content-desc ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#connect .content-desc ul li {
+  margin: 1rem;
+}
+#connect .content-desc ul li a {
+  color: red;
+}
+#connect .content-desc ul li a:hover {
+  color: cyan;
+}
+
+.content-active .content-title {
+  font-weight: 700;
+  font-size: 2rem;
+  z-index: 2;
+}
+.content-active .content-desc {
+  background: cyan;
+  box-shadow: 0 0 30px 10px cyan;
+}
+.content-active #content-about {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: auto;
+}
+.content-active #content-about #about-grid {
+  display: grid;
+  grid-template-areas: "education certifications" "experience skills";
+}
+.content-active #content-about #about-grid #education {
+  grid-area: education;
+}
+.content-active #content-about #about-grid #certifications {
+  grid-area: certifications;
+}
+.content-active #content-about #about-grid #certifications .certificate i {
+  font-size: 1rem;
+}
+.content-active #content-about #about-grid #experience {
+  grid-area: experience;
+}
+.content-active #content-about #about-grid #skills {
+  grid-area: skills;
+}
+.content-active #content-about #about-grid .about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.content-active #content-about #about-grid .about-section div {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+.content-active #content-about #about-grid .about-section ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 60%;
+}
+.content-active #content-about #about-grid .about-section ul li {
+  list-style: none;
+  padding: 0.5em;
+}
+.content-active #content-about #about-grid .about-section ul li a {
+  text-decoration: none;
+  color: black;
+}
+.content-active #content-about #about-grid .about-section ul li a:hover {
+  color: red;
+}
+.content-active #content-projects {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.content-active #content-projects .project-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+  overflow: auto;
+}
+.content-active #content-projects .project-list .project {
+  background: rgba(255, 253, 107, 0.925);
+  padding: 2em;
+  margin: 1em;
+  flex: 1 1 20em;
+  box-shadow: 1px 1px 5px 2px #c7cace;
+  border-radius: 5px;
+}
+.content-active #content-projects .project-list .project a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black;
+}
+.content-active #content-projects .project-list .project a:hover {
+  color: red;
+}
+
+.content-hidden .content-title {
+  text-shadow: 0 0 10px 5px cyan;
+  font-weight: 200;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 2;
+}
+.content-hidden .content-desc {
+  display: none;
+}
+
+@media screen and (max-width: 630px) {
+  .content-active #content-about #about-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #connect .content-desc ul li {
+    margin: 0.5rem;
+  }
+}
+/*scrollbar*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: whitesmoke;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #009c9c;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #004b4b;
+}
+
+/*# sourceMappingURL=index.css.map */
